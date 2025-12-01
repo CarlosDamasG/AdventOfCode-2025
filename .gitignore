@@ -1,0 +1,16 @@
+# Binarios
+*.exe
+*.out
+*.o
+
+# Build directories
+build/
+bin/
+obj/
+
+# VS Code (todo ignorado)
+.vscode/
+
+# Sistema
+.DS_Store
+*~
