@@ -9,23 +9,17 @@ long long SumaIDInvalidos(const std::string& input) {
   long long sumatorio = 0;
   while (std::getline(rangos_digitos, rango, ',')) {
     int posicion_guion = rango.find('-');
-    //std::cout << "-llegue0-\n";
     std::string str_num1 = rango.substr(0, posicion_guion);
     std::string str_num2 = rango.substr(posicion_guion + 1);
-    //std::cout << "str1: " << str_num1 << " - " << str_num2 << ":str2\n";
-    //std::cout << "-llegue1-\n";
     long long num1 = stoll(str_num1);
     long long num2 = stoll(str_num2);
     for (long long i = num1; i <= num2; i++) {
       std::string str_i = std::to_string(i);
       int tamaño_num = str_i.length();
       if (tamaño_num % 2 == 0) {
-        //std::cout << "-llegue2-\n";
         std::string primera_mitad_num = str_i.substr(0, tamaño_num / 2);
         std::string segunda_mitad_num = str_i.substr((tamaño_num / 2));
-        //std::cout << "num1: " << primera_mitad_num << " - " << segunda_mitad_num << ":num2\n";
         if (primera_mitad_num == segunda_mitad_num) {
-          //std::cout << "añadimos el numero: " << i << std::endl;
           sumatorio += i;
         }
       }
