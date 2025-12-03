@@ -26,7 +26,6 @@ long long VoltajeTotal(const std::string& nombre_archivo) {
     }
     std::string str_voltaje_banco = {primer_digito, segundo_digito};
     voltaje_total += std::stoi(str_voltaje_banco);
-    std::cout << "Sumo el: " << str_voltaje_banco << std::endl;
   }
   archivo.close();
   return voltaje_total;
