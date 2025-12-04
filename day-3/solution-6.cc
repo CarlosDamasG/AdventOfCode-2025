@@ -19,7 +19,6 @@ long long VoltajeTotal(const std::string& nombre_archivo) {
     int size_buscado = VOLTAJE_SIZE;
     int posicion_digito_limite = copia_banco_bateria.size() - size_buscado;
     std::string digitos_donde_buscar = copia_banco_bateria.substr(0, posicion_digito_limite + 1);
-    int h = 0;
     while ((posicion_digito_limite > 0) && (!copia_banco_bateria.empty()) && (str_voltaje_banco.size() < VOLTAJE_SIZE)) {
       char digito_maximo = digitos_donde_buscar[0];
       int posicion_digito_maximo = 0;
